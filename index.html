@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Verificador contraseña</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+    <!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="display-3 text-center">Verificador Contraseña</h1>
+
+      <div class="input-group">
+        <input type="password" id="password" class="form-control" placeholder="Escriba una contraseña valida" onkeyup="getPassword()"/>
+        <span class="input-group-btn">
+          <button id='btnValidar' class="btn btn-success" type="button" onclick="verificarContraseña()">Verificar</button>
+          <button id="mostrar" class="btn btn-primary" type="button" onclick="mostrarContraseña()">Mostrar Contraseña</button>
+        </span>
+      </div>
+      <br/>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">La contraseña debe:</h1>
+          <ul class="lead list-group" id="requisitos">
+            <li id="largo" class="list-group-item">Debe tener un mínimo de 8 carácteres</li>
+            <li id="minuscula" class="list-group-item">Debe tener como mínimo 2 minúsculas</li>
+            <li id="mayuscula" class="list-group-item">Debe tener al menos 1 mayúscula</li>
+            <li id="numero" class="list-group-item">Debe tener al menos 5 números</li>
+            <li id="especial" class="list-group-item">Debe tener un carácter que no sea alfanumérico</li>
+            <li id="repite" class="list-group-item">No deben repetirse los caracteres</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
